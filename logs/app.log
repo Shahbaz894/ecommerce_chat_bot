@@ -1,0 +1,500 @@
+[2025-09-15 12:08:25] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 12:08:25] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 12:08:25] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 12:08:25] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 12:08:25] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 12:08:26] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 12:08:26] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:29:36] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:29:36] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:29:36] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:29:36] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:29:36] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:29:37] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:29:37] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:36:50] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:36:50] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:36:50] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:36:50] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:36:50] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:36:51] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:36:51] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:44:28] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:44:28] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:44:28] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:44:28] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:44:28] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:44:28] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:44:28] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:45:33] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:45:33] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:45:33] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:45:33] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:45:33] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:45:33] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:45:33] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:51:58] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:51:58] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:51:58] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:51:58] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:51:58] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:51:58] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:51:58] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:54:41] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:54:41] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:54:41] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:54:41] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:54:41] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:54:42] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:54:42] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:57:41] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:57:41] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:57:41] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:57:41] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:57:41] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:57:42] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:57:42] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 14:59:47] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:59:47] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 14:59:47] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 14:59:47] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 14:59:47] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 14:59:48] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 14:59:48] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 15:00:11] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 15:00:11] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 15:00:11] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 15:00:11] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 15:00:11] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 15:00:12] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 15:00:12] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 17:48:55] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 17:48:55] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 17:48:55] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 17:48:55] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 17:48:55] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 17:48:56] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 17:48:56] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 17:56:23] [ERROR] [services.chatbot_services:39] - Unexpected error: 'dict' object has no attribute 'replace'
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 27, in get_product_info
+    response = self.retriever.get_answer(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 116, in get_answer
+    response = self.chain.invoke({"question": query})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2648, in _similarity_search_with_score_id_impl
+    embedding_vector = self._get_safe_embedding().embed_query(query)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 173, in embed_query
+    return self._embed([text], embed_kwargs)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in _embed
+    texts = [x.replace("\n", " ") for x in texts]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in <listcomp>
+    texts = [x.replace("\n", " ") for x in texts]
+             ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+[2025-09-15 18:04:44] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:04:44] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 18:04:44] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:04:44] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 18:04:44] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 18:04:44] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 18:04:44] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 18:06:07] [ERROR] [services.chatbot_services:39] - Unexpected error: 'dict' object has no attribute 'replace'
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 27, in get_product_info
+    response = self.retriever.get_answer(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 124, in get_answer
+    response = self.chain.invoke({"question": query})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2648, in _similarity_search_with_score_id_impl
+    embedding_vector = self._get_safe_embedding().embed_query(query)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 173, in embed_query
+    return self._embed([text], embed_kwargs)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in _embed
+    texts = [x.replace("\n", " ") for x in texts]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in <listcomp>
+    texts = [x.replace("\n", " ") for x in texts]
+             ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+[2025-09-15 18:06:10] [ERROR] [services.chatbot_services:39] - Unexpected error: 'dict' object has no attribute 'replace'
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 27, in get_product_info
+    response = self.retriever.get_answer(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 124, in get_answer
+    response = self.chain.invoke({"question": query})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2648, in _similarity_search_with_score_id_impl
+    embedding_vector = self._get_safe_embedding().embed_query(query)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 173, in embed_query
+    return self._embed([text], embed_kwargs)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in _embed
+    texts = [x.replace("\n", " ") for x in texts]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in <listcomp>
+    texts = [x.replace("\n", " ") for x in texts]
+             ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+[2025-09-15 18:08:32] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:08:32] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 18:08:32] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:08:32] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 18:08:32] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 18:08:32] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 18:08:32] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 18:10:23] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:10:23] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-15 18:10:23] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-15 18:10:23] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-15 18:10:23] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-15 18:10:23] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-15 18:10:23] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-15 18:11:08] [INFO] [services.chatbot_services:28] - Generated response for query: Suggest me the best airbuds under 2000 with good battery life
+[2025-09-15 18:40:11] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy airbuds suggest me
+[2025-09-15 18:43:10] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 18:43:19] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 18:49:54] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket can you the product image
+[2025-09-15 18:50:07] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 18:50:22] [INFO] [services.chatbot_services:28] - Generated response for query: show jacket iamge
+[2025-09-15 18:54:50] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket show its images
+[2025-09-15 19:03:06] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket and show image
+[2025-09-15 19:05:06] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 19:13:39] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 19:14:05] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 19:15:04] [INFO] [services.chatbot_services:28] - Generated response for query: i see image not url
+[2025-09-15 19:23:56] [INFO] [services.chatbot_services:28] - Generated response for query: i want to buy jacket
+[2025-09-15 21:42:46] [ERROR] [services.chatbot_services:39] - Unexpected error: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "E:\ecommerce_chat_bot\venv\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 27, in get_product_info
+    response = self.retriever.get_answer(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 87, in get_answer
+    response = self.chain.invoke(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2651, in _similarity_search_with_score_id_impl
+    return self._similarity_find_with_score_id_by_sort(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2782, in _similarity_find_with_score_id_by_sort
+    return [
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2782, in <listcomp>
+    return [
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2194, in <genexpr>
+    return (
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2063, in <genexpr>
+    final_doc_iterator = (doc for doc in find_raw_iterator)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\find_cursor.py", line 228, in __next__
+    self._try_ensure_fill_buffer()
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\find_cursor.py", line 201, in _try_ensure_fill_buffer
+    self._query_engine._fetch_page(
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\query_engine.py", line 143, in _fetch_page
+    raw_f_response = self.collection._api_commander.request(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\utils\api_commander.py", line 470, in request
+    raw_response = self.raw_request(
+                   ^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\utils\api_commander.py", line 378, in raw_request
+    raw_response = self.client.request(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "E:\ecommerce_chat_bot\venv\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+[2025-09-15 21:43:05] [ERROR] [services.chatbot_services:39] - Unexpected error: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "E:\ecommerce_chat_bot\venv\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 27, in get_product_info
+    response = self.retriever.get_answer(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 87, in get_answer
+    response = self.chain.invoke(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2651, in _similarity_search_with_score_id_impl
+    return self._similarity_find_with_score_id_by_sort(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2782, in _similarity_find_with_score_id_by_sort
+    return [
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2782, in <listcomp>
+    return [
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2194, in <genexpr>
+    return (
+           ^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2063, in <genexpr>
+    final_doc_iterator = (doc for doc in find_raw_iterator)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\find_cursor.py", line 228, in __next__
+    self._try_ensure_fill_buffer()
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\find_cursor.py", line 201, in _try_ensure_fill_buffer
+    self._query_engine._fetch_page(
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\data\cursors\query_engine.py", line 143, in _fetch_page
+    raw_f_response = self.collection._api_commander.request(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\utils\api_commander.py", line 470, in request
+    raw_response = self.raw_request(
+                   ^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\astrapy\utils\api_commander.py", line 378, in raw_request
+    raw_response = self.client.request(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "E:\ecommerce_chat_bot\venv\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed

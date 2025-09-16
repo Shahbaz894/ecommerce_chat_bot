@@ -1,0 +1,24 @@
+vectorstore:
+  provider: astradb
+  top_k: 5
+
+embeddings:
+  provider: huggingface
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+
+
+llm:
+  openai:
+    provider: openai
+    model: "gpt-4o-mini"
+    temperature: 0.2
+
+  groq:
+    provider: groq
+    model: "meta-llama/llama-4-maverick-17b-128e-instruct"
+    temperature: 0.2
+
+data_sources:
+  csv_path: "E:/ecommerce_chat_bot/data/flipkart_product_review.csv"
+  api_url: "https://fakestoreapi.com/products"
