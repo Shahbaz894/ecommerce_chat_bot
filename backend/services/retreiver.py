@@ -1,41 +1,62 @@
-from langchain_groq import ChatGroq
-from langchain_openai import ChatOpenAI
+# backend/services/retreiver.py
+
+from langchain_core.chat_history import InMemoryChatMessageHistory
+from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 from langchain.prompts import ChatPromptTemplate
-from dotenv import load_dotenv
+from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 import os
 
 from ingestion.data_ingestion import DataIngestion
-from config.setting import GROQ_API_KEY, get_llm_config
+from config.setting import get_llm_config
 from prompt_library.system_prompt import PRODUCT_BOT_PROMPT
 
-# Initialize vector store (run ingestion pipeline)
-vstore = DataIngestion().run()
-
-load_dotenv()
+# Global in-memory session storage
+chat_histories = {}
 
 
 class RetrieverServices:
     """
-    RetrieverServices integrates:
-    - A vector store retriever (AstraDB in this case).
-    - A Groq/OpenAI LLM.
-    - A prompt that injects context + user query.
+    Chatbot Retriever Service for Ecommerce queries.
 
-    The chain:
-        user_query → retriever fetches relevant docs → LLM with system prompt → response.
+    Responsibilities:
+    -----------------
+    - Load vector database (AstraDB) as retriever.
+    - Initialize Groq/OpenAI LLM for response generation.
+    - Build a LangChain pipeline with prompt templates.
+    - Maintain per-session chat history with RunnableWithMessageHistory.
+
+    Attributes:
+    -----------
+    llm : ChatGroq | ChatOpenAI
+        Large language model instance.
+    retriever : BaseRetriever
+        Vector store retriever for semantic search.
+    prompt : ChatPromptTemplate
+        Prompt template with system + human instructions.
+    chain_with_history : RunnableWithMessageHistory
+        Runnable chain supporting conversational memory.
     """
 
     def __init__(self, provider: str = "groq"):
         """
-        Initialize the retriever service.
-        Args:
-            provider (str): Which LLM to use ("groq" or "openai").
+        Initialize the retriever service with an LLM provider.
+
+        Parameters
+        ----------
+        provider : str, optional
+            LLM provider name ("groq" or "openai"), default is "groq".
+
+        Raises
+        ------
+        ValueError
+            If the provider is not supported.
         """
         llm_config = get_llm_config(provider)
 
-        # ✅ Initialize LLM
+        # Initialize LLM
         if provider == "groq":
             self.llm = ChatGroq(
                 api_key=os.getenv("GROQ_API_KEY"),
@@ -51,38 +72,75 @@ class RetrieverServices:
         else:
             raise ValueError(f"Unsupported provider: {provider}")
 
-        # ✅ Create retriever (search top 3 docs)
+        # Vector retriever
+        vstore = DataIngestion().run()
         self.retriever = vstore.as_retriever(
             search_type="similarity",
-            search_kwargs={"k": 3},
+            search_kwargs={"k": 3}
         )
 
-        # ✅ Prompt template (system + user)
+        # Prompt template
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", PRODUCT_BOT_PROMPT),
             ("human", "{question}")
         ])
 
-        # ✅ Build chain
-        self.chain = (
+        # Core chain:
+        # - Pass question directly to retriever as query
+        # - Collect context + question for LLM prompt
+        base_chain = (
             {
-                "context": self.retriever,        # retriever works with string input
-                "question": RunnablePassthrough() # passthrough user query
+                "context": (lambda x: self.retriever.invoke(x["question"])),
+                "question": RunnablePassthrough()
             }
             | self.prompt
             | self.llm
             | StrOutputParser()
         )
 
-    def get_answer(self, query: str) -> str:
-        """
-        Query the retriever + LLM chain.
+        # Wrap with chat history
+        self.chain_with_history = RunnableWithMessageHistory(
+            base_chain,
+            self._get_session_history,
+            input_messages_key="question",
+            history_messages_key="history"
+        )
 
-        Args:
-            query (str): User's natural language question.
-        Returns:
-            str: AI-generated response.
+    def _get_session_history(self, session_id: str) -> InMemoryChatMessageHistory:
         """
-        # ✅ Only pass plain string
-        response = self.chain.invoke(query)
-        return response
+        Retrieve or create chat history for a session.
+
+        Parameters
+        ----------
+        session_id : str
+            Unique identifier for the chat session.
+
+        Returns
+        -------
+        InMemoryChatMessageHistory
+            In-memory history object for the session.
+        """
+        if session_id not in chat_histories:
+            chat_histories[session_id] = InMemoryChatMessageHistory()
+        return chat_histories[session_id]
+
+    def get_answer(self, query: str, session_id: str = "default") -> str:
+        """
+        Generate an AI-powered answer for a user query.
+
+        Parameters
+        ----------
+        query : str
+            Customer query or product-related question.
+        session_id : str, optional
+            Session identifier for maintaining chat history.
+
+        Returns
+        -------
+        str
+            Chatbot's generated response.
+        """
+        return self.chain_with_history.invoke(
+            {"question": query},
+            config={"configurable": {"session_id": session_id}}
+        )

@@ -1,29 +1,31 @@
-# backend/api/routes.py
-
 from fastapi import APIRouter, Query
-
 from utils.exceptions import AppException
 from services.chatbot_services import ChatbotServices
+from db.client import get_collection  # import from your db folder
 
-# Create router
-router = APIRouter(prefix="/api", tags=["Chatbot"])
-
-# Instantiate chatbot service
+router = APIRouter(tags=["Chatbot"])
 chatbot_service = ChatbotServices()
 
-@router.get("/ask_product")
-async def ask_product(query: str = Query(..., description="Customer product-related query")):
-    """
-    API endpoint to ask EcommerceBot a product-related question.
-    
-    Args:
-        query (str): Customer's question about a product.
+def get_history(session_id: str):
+    collection = get_collection("chat_history")
+    # Fetch messages for the session
+    rows = collection.find({"session_id": session_id})
+    return [{"sender": row["sender"], "text": row["message"]} for row in rows]
 
-    Returns:
-        dict: Answer from chatbot with context.
-    """
+@router.get("/history")
+async def get_chat_history(session_id: str):
     try:
-        return chatbot_service.get_product_info(query)
+        return get_history(session_id)
+    except Exception as e:
+        return {"error": str(e), "status_code": 500}
+
+@router.get("/ask_product")
+async def ask_product(
+    query: str = Query(..., description="Customer product-related query"),
+    session_id: str = Query("default", description="Unique session ID to maintain chat history")
+):
+    try:
+        return chatbot_service.get_product_info(query, session_id=session_id)
     except AppException as e:
         return {"error": e.message, "status_code": e.status_code}
     except Exception as e:

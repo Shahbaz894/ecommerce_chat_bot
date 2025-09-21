@@ -6,41 +6,74 @@ Built with FastAPI for backend, vanilla JS frontend (can be upgraded to React/Ne
 ecommerce_chat_bot/
 │
 ├── backend/
-│   ├── main.py
+│   ├── main.py                        # FastAPI entry point
+│   │
 │   ├── api/
-│   │   └── routes.py
+│   │   ├── routes.py                  # REST endpoints
+│   │   └── voice_routes.py            # Endpoints for speech-to-text / text-to-speech
+│   │
 │   ├── services/
-│   │   ├── chatbot_service.py
-│   │   └── retriever_service.py
+│   │   ├── chatbot_service.py         # Handles LLM calls (Groq/HF)
+│   │   ├── retriever_service.py       # Queries AstraDB + CSV + API
+│   │   ├── voice_service.py           # Handles STT (speech-to-text) + TTS
+│   │   └── product_service.py         # Product search business logic
+│   │
 │   ├── ingestion/
-│   │   ├── csv_loader.py
-│   │   ├── api_loader.py
-│   │   └── data_ingestion.py
+│   │   ├── csv_loader.py              # Load CSV product reviews
+│   │   ├── api_loader.py              # Fetch from FakeStore API
+│   │   ├── db_loader.py               # Save data into AstraDB
+│   │   └── data_ingestion.py          # Orchestration script
+│   │
+│   ├── db/
+│   │   └── connection.py              # AstraDB connection (astrapy or cassandra-driver)
+│   │
 │   ├── config/
-│   │   ├── settings.py
+│   │   ├── settings.py                # Loads env + config.yaml
 │   │   └── config.yaml
+│   │
 │   ├── utils/
 │   │   ├── logging.py
-│   │   └── exceptions.py
+│   │   ├── exceptions.py
+│   │   └── audio_utils.py             # Audio encoding/decoding helpers
+│   │
 │   ├── prompt_library/
-│   │   └── system_prompt.py
+│   │   └── system_prompt.py           # System prompts for chatbot
+│   │
 │   ├── requirements.txt
 │   ├── Dockerfile
 │   └── tests/
+│       ├── test_chatbot.py
+│       ├── test_retriever.py
+│       ├── test_voice.py
+│       └── test_db.py
 │
 ├── frontend/
-│   ├── index.html        # Chat UI page
-│   ├── styles.css        # Styling for chatbot UI
-│   └── app.js            # JavaScript logic to call FastAPI backend
+│   ├── public/
+│   │   └── mic-icon.png               # UI assets
+│   │
+│   ├── app/
+│   │   ├── page.js                    # Next.js entry page
+│   │   ├── components/
+│   │   │   ├── ChatCart.jsx           # Chat UI
+│   │   │   └── VoiceAssistant.jsx     # Voice button + streaming audio
+│   │   └── styles/
+│   │       └── chatbot.css
+│   │
+│   ├── next.config.mjs                # Image + env setup
+│   └── package.json
 │
 ├── data/
-│   └── flipkart_product_review.csv
+│   ├── flipkart_product_review.csv
+│   └── ingested_products.json
 │
 ├── logs/
-├── .env
+│   └── app.log
+│
+├── .env                               # Tokens, DB creds, API keys
 ├── setup.py
 ├── docker-compose.yml
 └── README.md
+
 
 
 ⚙️ Setup Instructions

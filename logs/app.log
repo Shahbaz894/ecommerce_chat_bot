@@ -498,3 +498,323 @@ Traceback (most recent call last):
   File "E:\ecommerce_chat_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
     raise mapped_exc(message) from exc
 httpx.ConnectError: [Errno 11001] getaddrinfo failed
+[2025-09-16 18:30:12] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:30:12] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:30:13] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:30:13] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:30:13] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:30:14] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:30:14] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:35:48] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:35:48] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:35:48] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:35:48] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:35:48] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:35:49] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:35:49] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:42:30] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:42:30] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:42:30] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:42:30] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:42:30] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:42:31] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:42:31] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:43:00] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:43:00] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:43:00] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:43:00] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:43:00] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:43:01] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:43:01] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:43:24] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:43:24] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:43:24] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:43:24] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:43:24] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:43:25] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:43:25] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:56:09] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:56:09] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 18:56:09] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 18:56:09] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 18:56:09] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 18:56:10] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 18:56:10] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 18:56:59] [ERROR] [services.chatbot_services:44] - Unexpected error: 'dict' object has no attribute 'replace'
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 32, in get_product_info
+    response = self.retriever.get_answer(query, session_id=session_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 82, in get_answer
+    return self.chain_with_history.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3082, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4828, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1953, in _call_with_config
+    context.run(
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\config.py", line 429, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4696, in _invoke
+    output = output.invoke(
+             ^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3080, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3816, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "E:\ecommerce_chat_bot\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3800, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\retrievers.py", line 261, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1080, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2553, in similarity_search
+    for (doc, _, _) in self._similarity_search_with_score_id_impl(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_astradb\vectorstores.py", line 2648, in _similarity_search_with_score_id_impl
+    embedding_vector = self._get_safe_embedding().embed_query(query)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 173, in embed_query
+    return self._embed([text], embed_kwargs)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in _embed
+    texts = [x.replace("\n", " ") for x in texts]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 125, in <listcomp>
+    texts = [x.replace("\n", " ") for x in texts]
+             ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+[2025-09-16 19:08:44] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 19:08:44] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-16 19:08:45] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-16 19:08:45] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-16 19:08:45] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-16 19:08:45] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-16 19:08:45] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-16 19:10:38] [INFO] [services.chatbot_services:33] - Generated response for query='i want to buy jacket' in session='user123'
+[2025-09-16 19:11:33] [INFO] [services.chatbot_services:33] - Generated response for query='ok i buy this jackect can you suggest me shirts' in session='user123'
+[2025-09-16 19:12:14] [INFO] [services.chatbot_services:33] - Generated response for query='i wan to buy shirts' in session='user123'
+[2025-09-16 19:12:24] [INFO] [services.chatbot_services:33] - Generated response for query='i want to buy jacket' in session='user123'
+[2025-09-16 19:29:36] [INFO] [services.chatbot_services:33] - Generated response for query='i want to buy jacket' in session='user123'
+[2025-09-16 19:29:59] [INFO] [services.chatbot_services:33] - Generated response for query='yes' in session='user123'
+[2025-09-17 11:26:22] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:26:22] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 11:26:22] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:26:22] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 11:26:22] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 11:26:23] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 11:26:23] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 11:30:50] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:30:50] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 11:30:50] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:30:50] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 11:30:50] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 11:30:50] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 11:30:50] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 11:31:15] [INFO] [services.chatbot_services:33] - Generated response for query='i want to buy jacket' in session='test-session'
+[2025-09-17 11:33:04] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:33:04] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 11:33:04] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 11:33:04] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 11:33:04] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 11:33:04] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 11:33:04] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 11:33:42] [INFO] [services.chatbot_services:33] - Generated response for query='i wantto buy jacket' in session='test-session'
+[2025-09-17 15:03:07] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 15:03:07] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 15:03:07] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 15:03:07] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 15:03:07] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 15:03:08] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 15:03:08] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:00:01] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:00:01] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:00:01] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:00:01] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:00:01] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:00:02] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:00:02] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:00:32] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:00:32] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:00:32] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:00:32] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:00:32] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:00:33] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:00:33] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:01:04] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:01:04] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:01:04] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:01:04] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:01:04] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:01:04] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:01:04] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:01:36] [INFO] [services.chatbot_services:33] - Generated response for query='i need a ring' in session='test-session'
+[2025-09-17 16:05:52] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:05:52] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:05:52] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:05:52] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:05:52] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:05:53] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:05:53] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:06:25] [INFO] [services.chatbot_services:33] - Generated response for query='i  need a ring' in session='test-session'
+[2025-09-17 16:07:44] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:07:44] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:07:44] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:07:44] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:07:44] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:07:45] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:07:45] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:08:31] [INFO] [services.chatbot_services:33] - Generated response for query='i need a ring' in session='test-session'
+[2025-09-17 16:09:04] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:09:04] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-17 16:09:04] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-17 16:09:04] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-17 16:09:04] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-17 16:09:05] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-17 16:09:05] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-17 16:09:33] [INFO] [services.chatbot_services:33] - Generated response for query='i need a ring' in session='test-session'
+[2025-09-17 16:10:05] [INFO] [services.chatbot_services:33] - Generated response for query='can you show the image of the product' in session='test-session'
+[2025-09-17 16:11:12] [INFO] [services.chatbot_services:33] - Generated response for query='can you show the image of the ring' in session='test-session'
+[2025-09-17 16:12:19] [INFO] [services.chatbot_services:33] - Generated response for query='any other ring ?' in session='test-session'
+[2025-09-17 16:13:05] [INFO] [services.chatbot_services:33] - Generated response for query='i need airbuds' in session='test-session'
+[2025-09-17 16:45:18] [INFO] [services.chatbot_services:33] - Generated response for query='i need a jacket' in session='user123'
+[2025-09-17 16:45:45] [INFO] [services.chatbot_services:33] - Generated response for query='i also need a ring and airbuds' in session='user123'
+[2025-09-17 16:49:32] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-17 16:49:59] [INFO] [services.chatbot_services:33] - Generated response for query='which headset is good' in session='user123'
+[2025-09-17 16:57:42] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-17 16:57:56] [INFO] [services.chatbot_services:33] - Generated response for query='yes i need jacket' in session='user123'
+[2025-09-18 15:50:25] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-18 15:50:25] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-18 15:50:25] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-18 15:50:25] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-18 15:50:25] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-18 15:50:26] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-18 15:50:26] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-18 15:56:11] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 15:56:40] [INFO] [services.chatbot_services:33] - Generated response for query='i need jacket' in session='user123'
+[2025-09-18 16:27:20] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 16:28:02] [INFO] [services.chatbot_services:33] - Generated response for query='yes i am intrested to buying jackets' in session='user123'
+[2025-09-18 16:38:24] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 16:38:37] [INFO] [services.chatbot_services:33] - Generated response for query='need airbuds' in session='user123'
+[2025-09-18 16:44:08] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 16:44:42] [INFO] [services.chatbot_services:33] - Generated response for query='yes tell price and brand' in session='user123'
+[2025-09-18 16:49:30] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 16:49:53] [INFO] [services.chatbot_services:33] - Generated response for query='give price' in session='user123'
+[2025-09-18 21:19:56] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-18 21:19:56] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-18 21:19:56] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-18 21:19:56] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-18 21:19:56] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-18 21:19:57] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-18 21:19:57] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-18 21:21:55] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 21:22:13] [INFO] [services.chatbot_services:33] - Generated response for query='i need jacket' in session='user123'
+[2025-09-18 21:23:15] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='test-session'
+[2025-09-18 21:23:34] [INFO] [services.chatbot_services:33] - Generated response for query='i need jacket' in session='test-session'
+[2025-09-18 21:24:03] [INFO] [services.chatbot_services:33] - Generated response for query='you have lather jacket' in session='test-session'
+[2025-09-18 21:28:11] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 21:28:19] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 21:28:35] [INFO] [services.chatbot_services:33] - Generated response for query='which jacket you suggest me' in session='user123'
+[2025-09-18 22:11:28] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-18 22:11:42] [INFO] [services.chatbot_services:33] - Generated response for query='i need jacket' in session='user123'
+[2025-09-18 22:19:16] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-20 19:18:24] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:18:24] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 19:18:24] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:18:24] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 19:18:24] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 19:18:26] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 19:18:26] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-20 19:37:21] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:37:21] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 19:37:21] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:37:21] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 19:37:21] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 19:37:23] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 19:37:23] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-20 19:38:07] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-20 19:38:27] [INFO] [services.chatbot_services:33] - Generated response for query='yes i need jackect' in session='user123'
+[2025-09-20 19:39:00] [INFO] [services.chatbot_services:33] - Generated response for query='i need a ring ' in session='user123'
+[2025-09-20 19:39:20] [INFO] [services.chatbot_services:33] - Generated response for query='can you show the ring' in session='user123'
+[2025-09-20 19:46:46] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:46:46] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 19:46:46] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 19:46:46] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 19:46:46] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 19:46:48] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 19:46:48] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-20 19:50:05] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='user123'
+[2025-09-20 19:50:30] [INFO] [services.chatbot_services:33] - Generated response for query='i need a ring can you show the image' in session='user123'
+[2025-09-20 19:51:20] [INFO] [services.chatbot_services:33] - Generated response for query='which airbuds is best' in session='user123'
+[2025-09-20 20:09:33] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:09:33] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 20:09:33] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:09:33] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 20:09:33] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 20:09:34] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 20:09:34] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-20 20:26:29] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:26:29] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 20:26:29] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:26:29] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 20:26:29] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 20:26:30] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 20:26:30] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-20 20:27:03] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:27:03] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-20 20:27:03] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-20 20:27:03] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-20 20:27:03] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-20 20:27:04] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-20 20:27:04] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-21 17:31:25] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-21 17:31:25] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-09-21 17:31:25] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-09-21 17:31:25] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-09-21 17:31:25] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-09-21 17:31:26] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-09-21 17:31:26] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-09-21 17:33:45] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 17:34:03] [INFO] [services.chatbot_services:33] - Generated response for query='i need ring can you show the image' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 17:34:26] [INFO] [services.chatbot_services:33] - Generated response for query='you give url show image' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 17:35:14] [INFO] [services.chatbot_services:33] - Generated response for query='my name is shahbaz' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 17:35:26] [INFO] [services.chatbot_services:33] - Generated response for query='what is my name' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:03:38] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:10:38] [INFO] [services.chatbot_services:33] - Generated response for query='can you show image' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:27:17] [INFO] [services.chatbot_services:33] - Generated response for query='can you show the image of ring' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:32:16] [INFO] [services.chatbot_services:33] - Generated response for query='show image' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:36:03] [INFO] [services.chatbot_services:33] - Generated response for query='i need jacket' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:36:37] [INFO] [services.chatbot_services:33] - Generated response for query='show gents jacket' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-09-21 18:37:25] [INFO] [services.chatbot_services:33] - Generated response for query='what its price' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
