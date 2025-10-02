@@ -1,87 +1,98 @@
 import streamlit as st
+import uuid
 import requests
+import os
+import speech_recognition as sr
 
-st.set_page_config(page_title="Ecommerce Chatbot", page_icon="🤖", layout="centered")
+API_URL = "http://localhost:8000"
 
-# Session ID (can be generated per user/session)
-SESSION_ID = "test-session"
+def main():
+    st.title("🛍️ Multilingual AI Shopping Assistant 🤖")
 
-# Initialize chat history
-if "history" not in st.session_state:
-    st.session_state.history = []
+    if "session_id" not in st.session_state:
+        st.session_state["session_id"] = str(uuid.uuid4())
 
-st.title("💬 Ecommerce Chatbot")
+    mode = st.radio("Choose input mode:", ["💬 Text", "🎤 Voice"])
 
-st.markdown("Ask product-related questions. The chat will appear below like a conversation.")
+    if mode == "💬 Text":
+        query = st.text_input("Type your question here:")
+        if st.button("Send Text Query") and query:
+            process_query(query)
 
-# Chat styles (left = bot, right = user)
-chat_container_style = """
-<style>
-.chat-box {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    height: 450px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-}
-.user-msg {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border-radius: 12px;
-    margin: 5px 0;
-    max-width: 70%;
-    float: right;
-    clear: both;
-}
-.bot-msg {
-    background-color: #e0e0e0;
-    color: black;
-    padding: 10px;
-    border-radius: 12px;
-    margin: 5px 0;
-    max-width: 70%;
-    float: left;
-    clear: both;
-}
-</style>
-"""
-st.markdown(chat_container_style, unsafe_allow_html=True)
+    elif mode == "🎤 Voice":
+        if st.button("Start Voice Query"):
+            with st.spinner("🎙️ Listening... please speak clearly."):
+                query = capture_voice()
+                if query:
+                    st.success(f"You said: {query}")
+                    process_query(query)
+                else:
+                    st.warning("⚠️ Could not recognize any speech. Try again.")
 
-# Input box
-message = st.text_input("Type your message here:")
+# -------------------------------
+# Voice input function
+# -------------------------------
+def capture_voice() -> str:
+    recognizer = sr.Recognizer()
+    mic = sr.Microphone()
 
-if st.button("Send") and message:
     try:
-        # Call FastAPI backend
-        url = f"http://127.0.0.1:8000/api/ask_product?query={message}&session_id={SESSION_ID}"
-        response = requests.get(url)
-        data = response.json()
-        answer = data.get("answer", "No answer returned")
+        with mic as source:
+            st.info("Adjusting for ambient noise...")
+            recognizer.adjust_for_ambient_noise(source, duration=1)
+            st.info("Listening...")
+            audio = recognizer.listen(source, timeout=5, phrase_time_limit=20)
 
-        # Save both user and bot messages
-        st.session_state.history.append({"role": "user", "content": message})
-        st.session_state.history.append({"role": "bot", "content": answer})
+        # Transcribe speech
+        text = recognizer.recognize_google(audio)
+        return text
+
+    except sr.UnknownValueError:
+        return None
+    except sr.RequestError as e:
+        st.error(f"Google Speech Recognition API error: {e}")
+        return None
+    except Exception as e:
+        st.error(f"Error capturing voice: {e}")
+        return None
+
+# -------------------------------
+# Existing process_query function
+# -------------------------------
+def process_query(query: str):
+    try:
+        response = requests.post(
+            f"{API_URL}/api/chat/query",
+            json={"query": query, "session_id": st.session_state['session_id']},
+        )
+
+        if response.status_code != 200:
+            st.error(f"❌ API Error: {response.text}")
+            return
+
+        result = response.json()
+        raw_text = result.get("raw_text", "No response from chatbot.")
+        audio_path = result.get("audio_path")
+
+        st.subheader("Chatbot Response:")
+        st.text_area(label="", value=raw_text, height=200)
+
+        if audio_path:
+            audio_response = requests.get(f"{API_URL}{audio_path}")
+            if audio_response.status_code == 200:
+                audio_bytes = audio_response.content
+                st.audio(audio_bytes, format="audio/mp3")
+                st.download_button(
+                    label="⬇️ Download Speech",
+                    data=audio_bytes,
+                    file_name=os.path.basename(audio_path),
+                    mime="audio/mp3"
+                )
+            else:
+                st.warning("⚠️ Could not fetch audio file.")
 
     except Exception as e:
-        st.error(f"Error: {e}")
+        st.error(f"Unexpected error: {e}")
 
-# Render chat history
-chat_html = '<div class="chat-box">'
-for chat in st.session_state.history:
-    if chat["role"] == "user":
-        chat_html += f'<div class="user-msg">{chat["content"]}</div>'
-    else:
-        chat_html += f'<div class="bot-msg">{chat["content"]}</div>'
-chat_html += "</div>"
-
-st.markdown(chat_html, unsafe_allow_html=True)
-
-# Auto-scroll to bottom
-st.markdown("""
-<script>
-const chatBox = window.parent.document.querySelector('.chat-box');
-if(chatBox) { chatBox.scrollTop = chatBox.scrollHeight; }
-</script>
-""", unsafe_allow_html=True)
+if __name__ == "__main__":
+    main()

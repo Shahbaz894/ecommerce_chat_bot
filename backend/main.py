@@ -1,30 +1,44 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from api.routes import router
+from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
+
+# Routers
+from api.routes import routes_router
+from api.chat_routes import chat_router
+from api.voice_routes import voice_router
+
+# Exception handlers
 from utils.exceptions import (
     app_exception_handler,
     http_exception_handler,
     generic_exception_handler,
     AppException,
 )
-from fastapi import HTTPException
+
+load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI(title="Ecommerce Chatbot API")
 
-# ✅ Configure CORS for frontend communication
+# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ⚠️ In production, replace with your frontend domain
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ✅ Register API routes
-app.include_router(router, prefix="/api")
+# Routers
+app.include_router(routes_router, prefix="/api")
+app.include_router(chat_router, prefix="/api/chat")
+app.include_router(voice_router, prefix="/api/voice")   # ✅ only once (clean)
 
-# ✅ Register exception handlers
+# Static files (for TTS responses etc.)
+app.mount("/static", StaticFiles(directory="responses"), name="static")
+
+# Exception handlers
 app.add_exception_handler(AppException, app_exception_handler)
 app.add_exception_handler(HTTPException, http_exception_handler)
 app.add_exception_handler(Exception, generic_exception_handler)
