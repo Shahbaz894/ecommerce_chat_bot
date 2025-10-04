@@ -5,8 +5,9 @@ from dotenv import load_dotenv
 
 # Routers
 from api.routes import routes_router
-from api.chat_routes import chat_router
-from api.voice_routes import voice_router
+
+from api.chat_routes import voice_router
+# from api.voice_routes import voice_router
 
 # Exception handlers
 from utils.exceptions import (
@@ -30,10 +31,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Routers
-app.include_router(routes_router, prefix="/api")
-app.include_router(chat_router, prefix="/api/chat")
-app.include_router(voice_router, prefix="/api/voice")   # ✅ only once (clean)
+ # ✅ only once (clean)
+
+app.include_router(routes_router, prefix="/api/chat", tags=["chat"])
+app.include_router(voice_router, prefix="/api/voice", tags=["voice"])
+app.include_router(routes_router, prefix="/api", tags=["history"])
+
+
+from fastapi.staticfiles import StaticFiles
+app.mount("/static", StaticFiles(directory="responses"), name="static")
 
 # Static files (for TTS responses etc.)
 app.mount("/static", StaticFiles(directory="responses"), name="static")

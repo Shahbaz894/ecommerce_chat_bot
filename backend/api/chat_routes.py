@@ -1,53 +1,58 @@
-from fastapi import APIRouter
-from pydantic import BaseModel
+from fastapi import APIRouter, UploadFile, File, Form
 from fastapi.responses import JSONResponse
 from services.chatbot_services import ChatbotServices
+import speech_recognition as sr
 from gtts import gTTS
-import os, uuid, logging
+import uuid, os, logging
+from pydub import AudioSegment
 
 logger = logging.getLogger(__name__)
-
-chat_router = APIRouter()
+voice_router = APIRouter()
 
 OUTPUT_DIR = "responses"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-class ChatRequest(BaseModel):
-    query: str
-    session_id: str
-
-@chat_router.post("/query")
-async def chat_query(payload: ChatRequest):
-    """
-    Accepts a text query, gets raw chatbot response, 
-    generates TTS, and returns both.
-    """
+@voice_router.post("/chat")
+async def voice_chat(
+    file: UploadFile = File(...),
+    session_id: str = Form(...)
+):
     try:
+        # Save uploaded file
+        temp_input = f"temp_{uuid.uuid4().hex}.webm"
+        with open(temp_input, "wb") as f:
+            f.write(await file.read())
+
+        # Convert to WAV using pydub
+        temp_wav = f"temp_{uuid.uuid4().hex}.wav"
+        audio = AudioSegment.from_file(temp_input, format="webm")
+        audio.export(temp_wav, format="wav")
+        os.remove(temp_input)
+
+        # Speech Recognition
+        recognizer = sr.Recognizer()
+        with sr.AudioFile(temp_wav) as source:
+            audio_data = recognizer.record(source)
+            text = recognizer.recognize_google(audio_data)
+        os.remove(temp_wav)
+
+        logger.info(f"Transcribed: {text}")
+
         # Get chatbot response
-        chatbot_service = ChatbotServices()
-        response = chatbot_service.get_product_info(payload.query, payload.session_id)
-        raw_text = response.get("answer") or str(response) or "No response from chatbot."
-        logger.info(f"Chatbot response: {raw_text}")
+        response = ChatbotServices().get_product_info(text, session_id)
+        raw_text = response.get("answer", "No response")
 
-        # Generate TTS audio if response exists
-        tts_file_path = None
-        if raw_text.strip():
-            tts = gTTS(text=raw_text, lang="en")
-            filename = f"speech_{uuid.uuid4().hex}.mp3"
-            tts_file_path = os.path.join(OUTPUT_DIR, filename)
-            tts.save(tts_file_path)
-            logger.info(f"TTS saved: {tts_file_path}")
+        # Generate TTS
+        tts_filename = f"speech_{uuid.uuid4().hex}.mp3"
+        tts_path = os.path.join(OUTPUT_DIR, tts_filename)
+        gTTS(raw_text).save(tts_path)
 
-        return JSONResponse(
-            content={
-                "raw_text": raw_text,
-                "audio_path": f"/static/{os.path.basename(tts_file_path)}" if tts_file_path else None
-            }
-        )
+        return JSONResponse({
+            "user_query": text,
+            "ai_response": raw_text,
+            "audio_path": f"/static/{tts_filename}"
+        })
 
     except Exception as e:
-        logger.exception("Error in chat_query")
-        return JSONResponse(
-            content={"error": "Failed to process query", "details": str(e)},
-            status_code=500
-        )
+        logger.error(f"Voice chat error: {e}")
+        return JSONResponse({"error": str(e)}, status_code=500)
