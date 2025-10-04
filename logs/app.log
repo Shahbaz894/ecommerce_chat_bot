@@ -3003,3 +3003,12 @@ AttributeError: 'str' object has no attribute 'retriever'
 [2025-10-04 19:38:16] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
 [2025-10-04 19:38:17] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
 [2025-10-04 19:38:17] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-04 19:41:27] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-10-04 19:59:51] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-10-04 20:23:13] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-04 20:23:13] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-04 20:23:13] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-04 20:23:13] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-04 20:23:13] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-04 20:23:16] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-04 20:23:16] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects

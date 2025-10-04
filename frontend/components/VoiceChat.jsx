@@ -3,14 +3,13 @@ import React, { useState, useRef } from "react";
 
 const BACKEND_URL = "http://localhost:8000";
 
-const ChatBot = () => {
+const VoiceChat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // ✅ generate session ID safely (SSR fix: no window reference before render)
   const [sessionId] = useState(() =>
     typeof window !== "undefined" && window.crypto?.randomUUID
       ? crypto.randomUUID()
@@ -20,7 +19,7 @@ const ChatBot = () => {
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
 
-  // ------------------- TEXT CHAT -------------------
+  // ---------------- TEXT CHAT ----------------
   const sendTextMessage = async () => {
     if (!input.trim()) return;
     setLoading(true);
@@ -53,14 +52,13 @@ const ChatBot = () => {
       setMessages((prev) => [...prev, userMessage, aiMessage]);
       setInput("");
     } catch (err) {
-      console.error("Text chat error:", err);
       setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
-  // ------------------- VOICE CHAT -------------------
+  // ---------------- VOICE CHAT ----------------
   const startRecording = async () => {
     try {
       setError(null);
@@ -78,8 +76,8 @@ const ChatBot = () => {
 
       mediaRecorder.start();
       setIsRecording(true);
-    } catch (err) {
-      setError("Microphone access denied.");
+    } catch {
+      setError("🎤 Microphone access denied.");
     }
   };
 
@@ -133,7 +131,7 @@ const ChatBot = () => {
     }
   };
 
-  // ------------------- UI -------------------
+  // ---------------- UI ----------------
   return (
     <div className="max-w-xl mx-auto p-4">
       <h2 className="text-lg font-bold mb-3">🤖 AI ChatBot (Text + Voice)</h2>
@@ -165,7 +163,7 @@ const ChatBot = () => {
         {loading && <div className="text-xs text-gray-600 mt-2">⏳ Processing...</div>}
       </div>
 
-      {/* Input Controls */}
+      {/* Text Input */}
       <div className="flex items-center gap-2 mt-4">
         <input
           type="text"
@@ -216,4 +214,4 @@ const ChatBot = () => {
   );
 };
 
-export default ChatBot;
+export default VoiceChat;
