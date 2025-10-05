@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 
 const BACKEND_URL = "http://localhost:8000";
 
-const VoiceChat = () => {
+export default function VoiceChat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isRecording, setIsRecording] = useState(false);
@@ -11,9 +11,7 @@ const VoiceChat = () => {
   const [error, setError] = useState(null);
 
   const [sessionId] = useState(() =>
-    typeof window !== "undefined" && window.crypto?.randomUUID
-      ? crypto.randomUUID()
-      : "session_" + Math.random().toString(36).slice(2, 9)
+    crypto.randomUUID ? crypto.randomUUID() : "session_" + Math.random().toString(36).substring(2, 9)
   );
 
   const mediaRecorderRef = useRef(null);
@@ -26,30 +24,15 @@ const VoiceChat = () => {
     setError(null);
 
     try {
-      const res = await fetch(`${BACKEND_URL}/api/chat/query`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: input, session_id: sessionId }),
-      });
-
+      const res = await fetch(`${BACKEND_URL}/api/ask_product?query=${encodeURIComponent(input)}&session_id=${sessionId}`);
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
 
-      const userMessage = {
-        id: Date.now() + "_u",
-        type: "user",
-        text: input,
-        timestamp: new Date().toLocaleTimeString(),
-      };
-
-      const aiMessage = {
-        id: Date.now() + "_a",
-        type: "ai",
-        text: data.answer || "No response",
-        timestamp: new Date().toLocaleTimeString(),
-      };
-
-      setMessages((prev) => [...prev, userMessage, aiMessage]);
+      setMessages((prev) => [
+        ...prev,
+        { id: Date.now() + "_u", type: "user", text: input, timestamp: new Date().toLocaleTimeString() },
+        { id: Date.now() + "_a", type: "ai", text: data.answer, timestamp: new Date().toLocaleTimeString() },
+      ]);
       setInput("");
     } catch (err) {
       setError(err.message);
@@ -63,20 +46,18 @@ const VoiceChat = () => {
     try {
       setError(null);
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
-
-      mediaRecorderRef.current = mediaRecorder;
+      const recorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
+      mediaRecorderRef.current = recorder;
       audioChunksRef.current = [];
 
-      mediaRecorder.ondataavailable = (e) => {
-        if (e.data?.size > 0) audioChunksRef.current.push(e.data);
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) audioChunksRef.current.push(e.data);
       };
 
-      mediaRecorder.onstop = () => sendVoiceMessage();
-
-      mediaRecorder.start();
+      recorder.onstop = () => sendVoiceMessage();
+      recorder.start();
       setIsRecording(true);
-    } catch {
+    } catch (err) {
       setError("🎤 Microphone access denied.");
     }
   };
@@ -91,12 +72,11 @@ const VoiceChat = () => {
 
   const sendVoiceMessage = async () => {
     if (!audioChunksRef.current.length) return;
-
     setLoading(true);
     try {
-      const audioBlob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+      const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
       const formData = new FormData();
-      formData.append("file", audioBlob, "voice.webm");
+      formData.append("file", blob, "voice.webm");
       formData.append("session_id", sessionId);
 
       const res = await fetch(`${BACKEND_URL}/api/voice/chat`, {
@@ -107,94 +87,83 @@ const VoiceChat = () => {
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
 
-      const userMessage = {
-        id: Date.now() + "_u",
-        type: "user",
-        text: data.user_query || "🎤 (voice input)",
-        timestamp: new Date().toLocaleTimeString(),
-      };
-
-      const aiMessage = {
-        id: Date.now() + "_a",
-        type: "ai",
-        text: data.ai_response || "No response",
-        timestamp: new Date().toLocaleTimeString(),
-        audioUrl: data.audio_path ? `${BACKEND_URL}${data.audio_path}` : null,
-      };
-
-      setMessages((prev) => [...prev, userMessage, aiMessage]);
+      setMessages((prev) => [
+        ...prev,
+        { id: Date.now() + "_u", type: "user", text: data.user_query || "🎤 (voice input)", timestamp: new Date().toLocaleTimeString() },
+        { id: Date.now() + "_a", type: "ai", text: data.ai_response, timestamp: new Date().toLocaleTimeString(), audioUrl: `${BACKEND_URL}${data.audio_path}` },
+      ]);
     } catch (err) {
       setError(err.message || "Voice processing failed");
     } finally {
-      audioChunksRef.current = [];
       setLoading(false);
+      audioChunksRef.current = [];
     }
   };
 
   // ---------------- UI ----------------
   return (
-    <div className="max-w-xl mx-auto p-4">
-      <h2 className="text-lg font-bold mb-3">🤖 AI ChatBot (Text + Voice)</h2>
+    <div className="max-w-xl mx-auto p-4 font-sans">
+      <h2 className="text-2xl font-bold mb-4 text-center">🤖 Ecomerce ChatBot </h2>
 
-      <div className="border rounded-lg p-3 h-96 overflow-y-auto bg-gray-50">
+      <div className="border rounded-lg p-3 h-96 overflow-y-auto bg-gray-100 shadow-inner">
         {messages.length === 0 && (
-          <p className="text-sm text-gray-500">No messages yet. Type or record to start.</p>
+          <p className="text-sm text-gray-500 text-center mt-8">
+            No messages yet. Type or record to start.
+          </p>
         )}
 
         {messages.map((msg) => (
           <div
             key={msg.id}
             className={`mb-3 p-2 rounded-lg ${
-              msg.type === "user" ? "bg-blue-100 text-right" : "bg-green-100 text-left"
+              msg.type === "user" ? "bg-blue-200 text-right ml-auto max-w-[80%]" : "bg-green-200 text-left mr-auto max-w-[80%]"
             }`}
           >
-            <p className="text-sm">{msg.text}</p>
-            <p className="text-xs text-gray-500">{msg.timestamp}</p>
+            <p className="text-sm whitespace-pre-line">{msg.text}</p>
+            <p className="text-xs text-gray-600 mt-1">{msg.timestamp}</p>
 
             {msg.type === "ai" && msg.audioUrl && (
               <div className="mt-2">
-                <audio controls src={msg.audioUrl} />
+                <audio controls src={msg.audioUrl} className="w-full" />
               </div>
             )}
           </div>
         ))}
 
-        {error && <div className="text-xs text-red-500 mt-2">⚠ {error}</div>}
-        {loading && <div className="text-xs text-gray-600 mt-2">⏳ Processing...</div>}
+        {error && <p className="text-red-500 text-xs mt-2">⚠ {error}</p>}
+        {loading && <p className="text-gray-600 text-xs mt-2">⏳ Processing...</p>}
       </div>
 
-      {/* Text Input */}
-      <div className="flex items-center gap-2 mt-4">
+      <div className="flex gap-2 mt-4">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask something..."
-          className="flex-1 border px-2 py-1 rounded"
+          className="flex-1 border px-3 py-2 rounded shadow-sm"
         />
         <button
           onClick={sendTextMessage}
           disabled={loading}
-          className="bg-blue-500 text-white px-3 py-2 rounded"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow"
         >
           Send
         </button>
       </div>
 
-      {/* Voice Controls */}
       <div className="flex justify-center gap-3 mt-3">
         {!isRecording ? (
           <button
             onClick={startRecording}
             disabled={loading}
-            className="bg-blue-600 text-white px-4 py-2 rounded"
+            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow"
           >
             🎙 Start Recording
           </button>
         ) : (
           <button
             onClick={stopRecording}
-            className="bg-red-600 text-white px-4 py-2 rounded"
+            className="bg-gray-700 text-white px-4 py-2 rounded shadow"
           >
             ⏹ Stop
           </button>
@@ -205,13 +174,11 @@ const VoiceChat = () => {
             setMessages([]);
             setError(null);
           }}
-          className="bg-gray-300 px-3 py-2 rounded"
+          className="bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded shadow"
         >
           Clear
         </button>
       </div>
     </div>
   );
-};
-
-export default VoiceChat;
+}

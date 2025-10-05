@@ -3012,3 +3012,21 @@ AttributeError: 'str' object has no attribute 'retriever'
 [2025-10-04 20:23:13] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
 [2025-10-04 20:23:16] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
 [2025-10-04 20:23:16] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-04 20:30:23] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='ac942a34-f7cf-4e2f-9c3c-c89914d3fbc8'
+[2025-10-05 16:01:23] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 16:01:23] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 16:01:23] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 16:01:23] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 16:01:23] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 16:01:24] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 16:01:24] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 16:19:29] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='5900c935-ae69-4879-9284-341075befdd9'
+[2025-10-05 16:19:46] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 16:19:46] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 16:19:47] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 16:19:47] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 16:19:47] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 16:19:48] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 16:19:48] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 16:20:09] [INFO] [services.chatbot_services:33] - Generated response for query='hello I need a jacket can you suggest me' in session='5900c935-ae69-4879-9284-341075befdd9'
+[2025-10-05 16:22:31] [INFO] [services.chatbot_services:33] - Generated response for query='tell me about news channels for us uk and canada' in session='5900c935-ae69-4879-9284-341075befdd9'

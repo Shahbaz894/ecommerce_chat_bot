@@ -136,10 +136,11 @@ export default function ChatCard({ title = "AI Assistant", subtitle = "Online", 
     setLoading(true);
 
     try {
-      const res = await fetch(`${BACKEND_BASE}/voice/query?session_id=${sessionId}`, {
-        method: "POST",
-        body: formData,
-      });
+    const res = await fetch(`${BACKEND_BASE}/api/voice/chat`, {
+      method: "POST",
+      body: formData,
+    });
+
 
       if (!res.ok) throw new Error(await res.text());
 
