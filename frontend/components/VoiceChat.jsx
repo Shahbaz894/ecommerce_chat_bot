@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef } from "react";
-import { motion } from "framer-motion"; // npm i framer-motion
+import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const BACKEND_URL = "http://localhost:8000";
 
@@ -19,8 +19,43 @@ export default function VoiceChat() {
 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
+  const chatBoxRef = useRef(null);
 
-  // ---------------- TEXT CHAT ----------------
+  // --- Scroll to bottom when messages update ---
+  useEffect(() => {
+    if (chatBoxRef.current) {
+      chatBoxRef.current.scrollTo({
+        top: chatBoxRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [messages]);
+
+  // ---------------------- Helper: Detect image URLs or Markdown ----------------------
+  const parseBotReply = (reply) => {
+    if (!reply) return { contentType: "text", text: "No reply" };
+
+    // Check for Markdown link syntax [text](url)
+    const markdownMatch = reply.match(/\[.*?\]\((https?:\/\/[^\s)]+)\)/);
+    const markdownUrl = markdownMatch ? markdownMatch[1] : null;
+
+    // Check for plain URL
+    const plainUrlMatch = reply.match(/https?:\/\/[^\s]+/);
+    const url = markdownUrl || (plainUrlMatch ? plainUrlMatch[0] : null);
+    const isImage = url && /\.(jpeg|jpg|gif|png|webp)$/i.test(url);
+
+    if (isImage) {
+      const cleanText = reply
+        .replace(/\[.*?\]\((https?:\/\/[^\s)]+)\)/, "")
+        .replace(url, "")
+        .trim();
+      return { contentType: "image", text: cleanText, imageUrl: url };
+    }
+
+    return { contentType: "text", text: reply };
+  };
+
+  // ---------------------- TEXT CHAT ----------------------
   const sendTextMessage = async () => {
     if (!input.trim()) return;
     setLoading(true);
@@ -35,18 +70,20 @@ export default function VoiceChat() {
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
 
+      const parsed = parseBotReply(data.answer);
+
       setMessages((prev) => [
         ...prev,
         {
           id: Date.now() + "_u",
-          type: "user",
+          role: "user",
           text: input,
           timestamp: new Date().toLocaleTimeString(),
         },
         {
           id: Date.now() + "_a",
-          type: "ai",
-          text: data.answer,
+          role: "ai",
+          ...parsed,
           timestamp: new Date().toLocaleTimeString(),
         },
       ]);
@@ -58,7 +95,7 @@ export default function VoiceChat() {
     }
   };
 
-  // ---------------- VOICE CHAT ----------------
+  // ---------------------- VOICE CHAT ----------------------
   const startRecording = async () => {
     try {
       setError(null);
@@ -104,18 +141,20 @@ export default function VoiceChat() {
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
 
+      const parsed = parseBotReply(data.ai_response);
+
       setMessages((prev) => [
         ...prev,
         {
           id: Date.now() + "_u",
-          type: "user",
+          role: "user",
           text: data.user_query || "🎤 (voice input)",
           timestamp: new Date().toLocaleTimeString(),
         },
         {
           id: Date.now() + "_a",
-          type: "ai",
-          text: data.ai_response,
+          role: "ai",
+          ...parsed,
           timestamp: new Date().toLocaleTimeString(),
           audioUrl: `${BACKEND_URL}${data.audio_path}`,
         },
@@ -128,11 +167,11 @@ export default function VoiceChat() {
     }
   };
 
-  // ---------------- UI ----------------
+  // ---------------------- UI ----------------------
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-[#0a0f2c] via-[#0e1440] to-[#0b1633] flex justify-center items-center p-4 sm:p-6">
+    <div className="min-h-screen w-full bg-[#050b25] flex justify-center items-center p-4 sm:p-6">
       <motion.div
-        className="w-full max-w-lg bg-[#101c44]/90 backdrop-blur-md border border-blue-400/20 shadow-[0_0_40px_rgba(0,150,255,0.2)] rounded-3xl p-6 text-white"
+        className="w-full max-w-lg bg-[#0d1645]/90 backdrop-blur-lg border border-blue-400/20 shadow-[0_0_40px_rgba(0,150,255,0.25)] rounded-3xl p-6 text-white"
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -142,7 +181,10 @@ export default function VoiceChat() {
         </h2>
 
         {/* Chat Box */}
-        <div className="border border-blue-500/30 rounded-2xl p-4 h-96 overflow-y-auto bg-[#111c3d]/70 shadow-inner scroll-smooth">
+        <div
+          ref={chatBoxRef}
+          className="border border-blue-500/30 rounded-2xl p-4 h-96 overflow-y-auto bg-[#111b3c]/70 shadow-inner scroll-smooth"
+        >
           {messages.length === 0 && (
             <p className="text-sm text-gray-400 text-center mt-20">
               No messages yet. Type or record to start ✨
@@ -156,15 +198,32 @@ export default function VoiceChat() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className={`mb-3 p-3 rounded-2xl border ${
-                msg.type === "user"
+                msg.role === "user"
                   ? "bg-blue-800/60 border-blue-400/30 text-right ml-auto max-w-[80%]"
                   : "bg-blue-900/40 border-blue-300/20 text-left mr-auto max-w-[80%]"
               }`}
             >
-              <p className="text-sm whitespace-pre-line">{msg.text}</p>
+              {/* Display text or image */}
+              {msg.contentType === "image" && msg.imageUrl ? (
+                <>
+                  {msg.text && (
+                    <p className="text-sm whitespace-pre-line mb-2">{msg.text}</p>
+                  )}
+                  <img
+                    src={msg.imageUrl}
+                    alt="AI content"
+                    className="rounded-xl mt-1 w-full max-h-64 object-contain border border-blue-300/30"
+                  />
+                </>
+              ) : (
+                <p className="text-sm whitespace-pre-line break-words">
+                  {msg.text}
+                </p>
+              )}
+
               <p className="text-xs text-gray-400 mt-1">{msg.timestamp}</p>
 
-              {msg.type === "ai" && msg.audioUrl && (
+              {msg.role === "ai" && msg.audioUrl && (
                 <div className="mt-2">
                   <audio controls src={msg.audioUrl} className="w-full" />
                 </div>
