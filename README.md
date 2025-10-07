@@ -2,77 +2,85 @@
 
 An AI-powered chatbot for e-commerce product search and customer support.
 Built with FastAPI for backend, vanilla JS frontend (can be upgraded to React/Next.js), and supports deployment on AWS EC2.
-📂 Project Structure
 ecommerce_chat_bot/
 │
 ├── backend/
-│   ├── main.py                        # FastAPI entry point
+│   ├── main.py                          # 🚀 FastAPI entry point (app startup)
 │   │
 │   ├── api/
-│   │   ├── routes.py                  # REST endpoints
-│   │   └── voice_routes.py            # Endpoints for speech-to-text / text-to-speech
+│   │   ├── chat_routes.py               # REST endpoints for chat messages
+│   │   ├── voice_routes.py              # Speech-to-Text / Text-to-Speech endpoints
+│   │   └── product_routes.py            # Product-specific endpoints (search/filter)
 │   │
 │   ├── services/
-│   │   ├── chatbot_service.py         # Handles LLM calls (Groq/HF)
-│   │   ├── retriever_service.py       # Queries AstraDB + CSV + API
-│   │   ├── voice_service.py           # Handles STT (speech-to-text) + TTS
-│   │   └── product_service.py         # Product search business logic
+│   │   ├── chatbot_service.py           # Handles LLM calls (OpenAI / Groq)
+│   │   ├── retriever_services.py        # Chatbot retriever + memory + AstraDB chat history
+│   │   ├── voice_service.py             # Speech recognition (STT) + TTS generation
+│   │   └── product_service.py           # Product lookup, recommendation logic
 │   │
 │   ├── ingestion/
-│   │   ├── csv_loader.py              # Load CSV product reviews
-│   │   ├── api_loader.py              # Fetch from FakeStore API
-│   │   ├── db_loader.py               # Save data into AstraDB
-│   │   └── data_ingestion.py          # Orchestration script
+│   │   ├── csv_loader.py                # Load product reviews / CSV data
+│   │   ├── api_loader.py                # Fetch product data from external APIs
+│   │   ├── db_loader.py                 # Upload product embeddings to AstraDB
+│   │   ├── data_ingestion.py            # Orchestration: run ingestion pipeline
+│   │   └── chat_history_setup.py        # ⚙️ Initializes AstraDB chat history collection
 │   │
 │   ├── db/
-│   │   └── connection.py              # AstraDB connection (astrapy or cassandra-driver)
+│   │   ├── connection.py                # AstraDB client (astrapy or cassandra-driver)
+│   │   └── client.py                    # Helper functions to connect/test DB
 │   │
 │   ├── config/
-│   │   ├── settings.py                # Loads env + config.yaml
-│   │   └── config.yaml
-│   │
-│   ├── utils/
-│   │   ├── logging.py
-│   │   ├── exceptions.py
-│   │   └── audio_utils.py             # Audio encoding/decoding helpers
+│   │   ├── settings.py                  # Load environment (.env) + parse config.yaml
+│   │   ├── config.yaml                  # Model and DB configuration
+│   │   └── constants.py                 # Common constant variables (keys, limits, etc.)
 │   │
 │   ├── prompt_library/
-│   │   └── system_prompt.py           # System prompts for chatbot
+│   │   └── system_prompt.py             # System prompt templates for chatbot persona
 │   │
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── tests/
-│       ├── test_chatbot.py
-│       ├── test_retriever.py
-│       ├── test_voice.py
-│       └── test_db.py
+│   ├── utils/
+│   │   ├── logging.py                   # Logging setup (rotating file handler, colors)
+│   │   ├── exceptions.py                # Custom error classes (DBError, APIError, etc.)
+│   │   └── audio_utils.py               # Audio encode/decode + mic input helpers
+│   │
+│   ├── tests/
+│   │   ├── test_chatbot.py              # Unit tests for chatbot pipeline
+│   │   ├── test_retriever.py            # Test AstraDB retriever + history loading
+│   │   ├── test_voice.py                # Test voice processing + audio endpoints
+│   │   └── test_db.py                   # Test AstraDB connection + collections
+│   │
+│   ├── requirements.txt                 # Backend dependencies
+│   ├── Dockerfile                       # Backend Docker setup
+│   └── README_BACKEND.md
 │
 ├── frontend/
-│   ├── public/
-│   │   └── mic-icon.png               # UI assets
-│   │
 │   ├── app/
-│   │   ├── page.js                    # Next.js entry page
+│   │   ├── page.js                      # 🧠 Next.js main UI (chat entry)
 │   │   ├── components/
-│   │   │   ├── ChatCart.jsx           # Chat UI
-│   │   │   └── VoiceAssistant.jsx     # Voice button + streaming audio
+│   │   │   ├── ChatCard.jsx             # Chat bubble interface
+│   │   │   └── VoiceAssistant.jsx       # Mic button + audio streaming logic
 │   │   └── styles/
-│   │       └── chatbot.css
+│   │       └── chatbot.css              # UI styling for chat interface
 │   │
-│   ├── next.config.mjs                # Image + env setup
-│   └── package.json
+│   ├── public/
+│   │   └── mic-icon.png                 # UI assets (icons, images)
+│   │
+│   ├── next.config.mjs                  # Next.js env + image setup
+│   ├── package.json                     # Frontend dependencies
+│   └── README_FRONTEND.md
 │
 ├── data/
-│   ├── flipkart_product_review.csv
-│   └── ingested_products.json
+│   ├── flipkart_product_review.csv      # Local dataset for product info
+│   ├── ingested_products.json           # After embeddings ingestion
+│   └── embeddings/                      # Optional folder for saved embeddings
 │
 ├── logs/
-│   └── app.log
+│   └── app.log                          # Global backend logs
 │
-├── .env                               # Tokens, DB creds, API keys
-├── setup.py
-├── docker-compose.yml
-└── README.md
+├── .env                                 # 🔒 Tokens, API keys, DB creds
+├── docker-compose.yml                   # Runs backend + frontend + AstraDB
+├── setup.py                             # Installation entry for package
+└── README.md                            # Full project documentation
+
 
 
 

@@ -3540,3 +3540,4 @@ KeyError: 'user'
 [2025-10-07 19:18:35] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
 [2025-10-07 19:18:53] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
 [2025-10-07 19:18:53] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:19:08] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='e2ff2b74-2f4a-4bea-83cd-0b40f61534b6'
