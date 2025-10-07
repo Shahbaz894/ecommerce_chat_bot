@@ -1,14 +1,15 @@
-from astrapy import DataAPIClient
 import os
+from astrapy import DataAPIClient
+from dotenv import load_dotenv
+load_dotenv()
 
-# Load token from environment variable
-ASTRA_TOKEN = os.getenv("ASTRA_DB_TOKEN")
-ASTRA_DB_URL = "https://39077156-05eb-46f5-80c3-55be2964c72b-us-east-2.apps.astra.datastax.com"
+def connect_to_database():
+    ASTRA_DB_TOKEN = os.getenv("ASTRA_DB_TOKEN")
+    ASTRA_DB_API_ENDPOINT = "https://39077156-05eb-46f5-80c3-55be2964c72b-us-east-2.apps.astra.datastax.com"
 
-# Initialize client
-client = DataAPIClient(ASTRA_TOKEN)
-db = client.get_database_by_api_endpoint(ASTRA_DB_URL)
+    if not ASTRA_DB_TOKEN:
+        raise ValueError("❌ Missing Astra DB Token — please set ASTRA_DB_TOKEN environment variable")
 
-def get_collection(name: str):
-    """Return a collection object by name"""
-    return db.get_collection(name)
+    client = DataAPIClient(ASTRA_DB_TOKEN)
+    db = client.get_database_by_api_endpoint(ASTRA_DB_API_ENDPOINT)
+    return db

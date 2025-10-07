@@ -3055,3 +3055,488 @@ AttributeError: 'str' object has no attribute 'retriever'
 [2025-10-05 17:00:36] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
 [2025-10-05 17:00:37] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
 [2025-10-05 17:00:37] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:00:59] [INFO] [services.chatbot_services:33] - Generated response for query='I need a ring can you show me' in session='4ac09ffe-ba64-4374-b788-d071f9638335'
+[2025-10-05 17:12:01] [INFO] [services.chatbot_services:33] - Generated response for query='show the records or my chat history' in session='95ea561d-3340-4fa1-af96-1a2e28169abe'
+[2025-10-05 17:15:20] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:15:20] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:15:21] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:15:21] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:15:21] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:15:22] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:15:22] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:16:35] [INFO] [services.chatbot_services:33] - Generated response for query='show history' in session='95ea561d-3340-4fa1-af96-1a2e28169abe'
+[2025-10-05 17:33:55] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:33:55] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:33:55] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:33:55] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:33:55] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:33:56] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:33:56] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:34:27] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:34:27] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:34:27] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:34:27] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:34:27] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:34:28] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:34:28] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:36:20] [INFO] [services.chatbot_services:33] - Generated response for query='show previous  text or details' in session='36da502d-22f3-4883-8f9c-ec0de629d15c'
+[2025-10-05 17:38:23] [INFO] [services.chatbot_services:33] - Generated response for query='what is my name' in session='36da502d-22f3-4883-8f9c-ec0de629d15c'
+[2025-10-05 17:38:47] [INFO] [services.chatbot_services:33] - Generated response for query='my name is shahbaz save in memory' in session='36da502d-22f3-4883-8f9c-ec0de629d15c'
+[2025-10-05 17:39:10] [INFO] [services.chatbot_services:33] - Generated response for query='what is my name' in session='600e3fc6-0d62-4682-ae9c-bfaf48d6d30e'
+[2025-10-05 17:43:53] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:43:53] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:43:53] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:43:53] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:43:53] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:43:55] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:43:55] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:47:42] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:47:42] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:47:42] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:47:42] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:47:42] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:47:43] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:47:43] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:51:16] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:51:16] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:51:16] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:51:16] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:51:16] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:51:17] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:51:17] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:51:41] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:51:41] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:51:41] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:51:41] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:51:41] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:51:42] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:51:42] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:52:05] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:52:05] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:54:33] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:54:33] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:54:33] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:54:33] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:54:33] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:54:38] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:54:38] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:55:16] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:55:16] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:55:19] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:55:19] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:55:19] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:55:19] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:55:19] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:55:23] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:55:23] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:56:02] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:56:02] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:56:10] [INFO] [services.chatbot_services:33] - Generated response for query='who i am' in session='e53b0ccc-bc82-43ff-a9a0-fd3bc7aa0c9b'
+[2025-10-05 17:57:40] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:57:40] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:57:40] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:57:40] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:57:40] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:57:50] [ERROR] [ingestion.api_loader:89] - RequestException while fetching data: HTTPSConnectionPool(host='fakestoreapi.com', port=443): Read timed out. (read timeout=10)
+[2025-10-05 17:59:10] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:59:10] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 17:59:10] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:59:10] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 17:59:10] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 17:59:11] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 17:59:11] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 17:59:40] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 17:59:40] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:01:29] [INFO] [services.chatbot_services:33] - Generated response for query='my name is shahbaz' in session='76b6cdf8-40a8-43a5-b465-95fffa168bdf'
+[2025-10-05 18:02:45] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:02:45] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:02:45] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:02:45] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:02:45] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:02:46] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:02:46] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:03:03] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:03:03] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:03:06] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:03:06] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:03:06] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:03:06] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:03:06] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:03:07] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:03:07] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:03:28] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:03:28] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:05:54] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:05:54] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:05:54] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:05:54] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:05:54] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:05:55] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:05:55] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:06:58] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:06:58] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:06:59] [INFO] [services.chatbot_services:33] - Generated response for query='my name?' in session='842bfaa4-50c4-4df0-9696-8226417fe26f'
+[2025-10-05 18:13:17] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:13:17] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:13:17] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:13:17] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:13:17] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:13:18] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:13:18] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:13:34] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:13:34] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:14:00] [INFO] [services.chatbot_services:33] - Generated response for query='my name is shahbaz ' in session='842bfaa4-50c4-4df0-9696-8226417fe26f'
+[2025-10-05 18:14:20] [INFO] [services.chatbot_services:33] - Generated response for query='who i am' in session='4cac3467-485e-473c-8a32-cc51c99d2984'
+[2025-10-05 18:14:45] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:14:45] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:14:45] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:14:45] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:14:45] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:14:45] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:14:45] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:15:08] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:15:08] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:15:40] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:15:40] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:15:40] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:15:40] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:15:40] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:15:41] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:15:41] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:16:01] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:16:01] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:17:27] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:17:27] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:17:27] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:17:27] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:17:27] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:17:27] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:17:27] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:17:49] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:17:49] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:18:27] [INFO] [services.chatbot_services:33] - Generated response for query='my name is?' in session='2b8d12aa-2a6f-45e2-b7d2-3691b4664803'
+[2025-10-05 18:19:09] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:19:09] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:19:09] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:19:09] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:19:09] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:19:09] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:19:09] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:19:32] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:19:32] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:21:02] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='f6ad1b7f-a2cc-474a-ae1c-02250201b5f5'
+[2025-10-05 18:22:49] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:22:49] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:22:49] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:22:49] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:22:49] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:22:50] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:22:50] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:23:10] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:23:10] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:23:16] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:23:16] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:23:16] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:23:16] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 18:23:16] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 18:23:17] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 18:23:17] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 18:23:34] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 18:23:34] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 18:23:47] [INFO] [services.chatbot_services:33] - Generated response for query='hey shahbaz' in session='f6ad1b7f-a2cc-474a-ae1c-02250201b5f5'
+[2025-10-05 19:23:58] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 19:23:58] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-05 19:23:58] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 19:23:58] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-05 19:23:58] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-05 19:24:00] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-05 19:24:00] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-05 19:24:20] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-05 19:24:20] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 15:57:21] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 15:57:21] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 15:57:22] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 15:57:22] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 15:57:22] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 15:57:22] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 15:57:22] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 15:58:22] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 15:58:22] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:15:45] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='e79c516f-54a5-491f-9dd4-87fb0bc6573f'
+[2025-10-06 16:18:11] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:18:11] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:18:11] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:18:11] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 16:18:11] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 16:18:12] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 16:18:12] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 16:19:13] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:19:13] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:21:05] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:21:05] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:21:05] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:21:05] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 16:21:05] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 16:21:06] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 16:21:06] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 16:21:27] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:21:27] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:30:41] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:30:41] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:30:41] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:30:41] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 16:30:41] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 16:30:42] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 16:30:42] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 16:30:59] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:30:59] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:33:51] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:33:51] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:33:51] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:33:51] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 16:33:51] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 16:33:52] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 16:33:52] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 16:34:13] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:34:13] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:39:21] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:39:21] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 16:39:21] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:39:21] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 16:39:21] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 16:39:22] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 16:39:22] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 16:39:43] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 16:39:43] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:12:51] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:12:51] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:12:51] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:12:51] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:12:51] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:12:52] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:12:52] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:15:48] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:15:48] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:16:30] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:16:30] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:16:30] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:16:30] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:16:30] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:16:31] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:16:31] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:16:58] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:16:58] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:19:26] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object is not callable. If you meant to call the 'get_collections' method on a 'Database' object it is failing because no such method exists. | Path: /api/history/f14e0463-4696-4e06-a479-cf64fc5c2378
+[2025-10-06 17:19:41] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='f14e0463-4696-4e06-a479-cf64fc5c2378'
+[2025-10-06 17:23:36] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:23:36] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:23:36] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:23:36] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:23:36] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:23:37] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:23:37] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:24:05] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:24:05] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:32:25] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:32:25] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:32:25] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:32:25] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:32:25] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:32:26] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:32:26] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:32:46] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:32:46] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:34:08] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object is not callable. If you meant to call the 'get_collections' method on a 'Database' object it is failing because no such method exists. | Path: /api/history/93c0130a-2e87-4486-a816-cd9c36388ac6
+[2025-10-06 17:34:15] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='93c0130a-2e87-4486-a816-cd9c36388ac6'
+[2025-10-06 17:34:15] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object is not callable. If you meant to call the 'get_collections' method on a 'Database' object it is failing because no such method exists. | Path: /api/history/93c0130a-2e87-4486-a816-cd9c36388ac6
+[2025-10-06 17:34:15] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object is not callable. If you meant to call the 'get_collections' method on a 'Database' object it is failing because no such method exists. | Path: /api/history/93c0130a-2e87-4486-a816-cd9c36388ac6
+[2025-10-06 17:37:52] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:37:52] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:37:52] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:37:52] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:37:52] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:37:53] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:37:53] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:38:15] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:38:15] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:38:51] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object has no attribute 'list' | Path: /api/history/8c62ccc5-05f0-4f22-9389-fc20a7c0cfb4
+[2025-10-06 17:38:58] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='8c62ccc5-05f0-4f22-9389-fc20a7c0cfb4'
+[2025-10-06 17:38:58] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object has no attribute 'list' | Path: /api/history/8c62ccc5-05f0-4f22-9389-fc20a7c0cfb4
+[2025-10-06 17:38:58] [WARNING] [utils.exceptions:38] - [HTTPException] 'Collection' object has no attribute 'list' | Path: /api/history/8c62ccc5-05f0-4f22-9389-fc20a7c0cfb4
+[2025-10-06 17:46:34] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:46:34] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:46:34] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:46:34] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:46:34] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:46:35] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:46:35] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:47:07] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:47:07] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:47:49] [WARNING] [utils.exceptions:38] - [HTTPException] Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://39077156-05eb-46f5-80c3-55be2964c72b-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401 | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:49:47] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='7e9a8c18-42dd-4b2e-8126-716707876e85'
+[2025-10-06 17:49:47] [WARNING] [utils.exceptions:38] - [HTTPException] Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://39077156-05eb-46f5-80c3-55be2964c72b-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401 | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:49:48] [WARNING] [utils.exceptions:38] - [HTTPException] Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://39077156-05eb-46f5-80c3-55be2964c72b-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401 | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:53:33] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:53:33] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:53:33] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:53:33] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:53:33] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:53:34] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:53:34] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:54:00] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:54:00] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:54:35] [WARNING] [utils.exceptions:38] - [HTTPException] 'list' object has no attribute 'get' | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:54:37] [INFO] [services.chatbot_services:33] - Generated response for query='my name is shahbz' in session='7e9a8c18-42dd-4b2e-8126-716707876e85'
+[2025-10-06 17:54:37] [WARNING] [utils.exceptions:38] - [HTTPException] 'list' object has no attribute 'get' | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:54:57] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:54:57] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:54:58] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:54:58] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 17:54:58] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 17:54:59] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 17:54:59] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 17:55:20] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 17:55:20] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 17:55:38] [WARNING] [utils.exceptions:38] - [HTTPException] 'list' object has no attribute 'get' | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 17:55:41] [INFO] [services.chatbot_services:33] - Generated response for query='i need pent' in session='7e9a8c18-42dd-4b2e-8126-716707876e85'
+[2025-10-06 17:55:41] [WARNING] [utils.exceptions:38] - [HTTPException] 'list' object has no attribute 'get' | Path: /api/history/7e9a8c18-42dd-4b2e-8126-716707876e85
+[2025-10-06 18:44:41] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:44:41] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 18:44:41] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:44:41] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 18:44:41] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 18:44:42] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 18:44:42] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 18:45:03] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:45:03] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 18:47:23] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:47:23] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-06 18:47:23] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:47:23] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-06 18:47:23] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-06 18:47:24] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-06 18:47:24] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-06 18:47:45] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-06 18:47:45] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:37:14] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:37:14] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:37:14] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:37:14] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 18:37:14] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 18:37:15] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 18:37:15] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 18:38:23] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:38:23] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:40:34] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:40:34] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:40:34] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:40:34] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 18:40:34] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 18:40:35] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 18:40:35] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 18:40:54] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:40:54] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:51:16] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:51:16] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:51:16] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:51:16] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 18:51:16] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 18:51:17] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 18:51:17] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 18:51:39] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:51:39] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:51:49] [WARNING] [utils.exceptions:38] - [HTTPException] Failed to fetch history: Collection does not exist, collection name: Collection does not exist, collection name: chat_history (COLLECTION_NOT_EXIST) | Path: /api/history/284a50bc-99f2-4753-8da9-8a319e7367a3
+[2025-10-07 18:53:32] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:53:32] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:53:32] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:53:32] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 18:53:32] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 18:53:33] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 18:53:33] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 18:54:09] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:54:09] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:55:07] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:55:07] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 18:55:07] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:55:07] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 18:55:07] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 18:55:08] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 18:55:08] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 18:55:28] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 18:55:28] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:01:47] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:01:47] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:01:47] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:01:47] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:01:47] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:01:48] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:01:48] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:02:16] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:02:16] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:02:44] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:02:44] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:02:44] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:02:44] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:02:44] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:02:45] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:02:45] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:03:05] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:03:05] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:06:37] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:06:37] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:06:37] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:06:37] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:06:37] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:06:38] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:06:38] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:06:58] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:06:58] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:09:38] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:09:38] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:09:38] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:09:38] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:09:38] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:09:39] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:09:39] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:09:57] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:09:57] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:13:21] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:13:21] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:13:21] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:13:21] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:13:21] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:13:24] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:13:24] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:14:03] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:14:03] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:14:07] [INFO] [services.chatbot_services:33] - Generated response for query='hey' in session='e2ff2b74-2f4a-4bea-83cd-0b40f61534b6'
+[2025-10-07 19:14:23] [ERROR] [services.chatbot_services:44] - Unexpected error: 'user'
+Traceback (most recent call last):
+  File "E:\ecommerce_chat_bot\backend\services\chatbot_services.py", line 32, in get_product_info
+    response = self.retriever.get_answer(query, session_id=session_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 111, in get_answer
+    response = self.chain_with_history.invoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\base.py", line 5497, in invoke
+    self._merge_configs(config),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\venv\Lib\site-packages\langchain_core\runnables\history.py", line 601, in _merge_configs
+    message_history = self.get_session_history(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce_chat_bot\backend\services\retreiver.py", line 79, in _get_session_history
+    memory.add_user_message(msg["user"])
+                            ~~~^^^^^^^^
+KeyError: 'user'
+[2025-10-07 19:18:33] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:18:33] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products
+[2025-10-07 19:18:33] [INFO] [ingestion.csv_loader:46] - Loading data from CSV: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:18:33] [INFO] [ingestion.csv_loader:69] - Transformed 450 rows into Document objects
+[2025-10-07 19:18:33] [INFO] [ingestion.api_loader:47] - Fetching data from API: https://fakestoreapi.com/products
+[2025-10-07 19:18:35] [INFO] [ingestion.api_loader:55] - Successfully fetched 20 products from API
+[2025-10-07 19:18:35] [INFO] [ingestion.api_loader:85] - Transformed 20 products into Document objects
+[2025-10-07 19:18:53] [INFO] [ingestion.csv_loader:33] - CSVLoader initialized with file: E:/ecommerce_chat_bot/data/flipkart_product_review.csv
+[2025-10-07 19:18:53] [INFO] [ingestion.api_loader:34] - APILoader initialized with API URL: https://fakestoreapi.com/products

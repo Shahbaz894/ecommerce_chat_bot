@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 # Routers
 from api.routes import routes_router
+from api.history_routes import history_router
 
 from api.chat_routes import voice_router
 # from api.voice_routes import voice_router
@@ -35,7 +36,8 @@ app.add_middleware(
 
 app.include_router(routes_router, prefix="/api/chat", tags=["chat"])
 app.include_router(voice_router, prefix="/api/voice", tags=["voice"])
-app.include_router(routes_router, prefix="/api", tags=["history"])
+# app.include_router(history_router, prefix="/api", tags=["history"])
+app.include_router(history_router)
 
 
 from fastapi.staticfiles import StaticFiles
@@ -53,3 +55,4 @@ app.add_exception_handler(Exception, generic_exception_handler)
 @app.get("/")
 def root():
     return {"message": "Ecommerce Chatbot API is running 🚀"}
+#uvicorn main:app --reload --host 0.0.0.0 --port 8000

@@ -1,5 +1,3 @@
-# backend/services/retreiver.py
-
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.schema.runnable import RunnablePassthrough
@@ -8,52 +6,18 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 import os
-
 from ingestion.data_ingestion import DataIngestion
 from config.setting import get_llm_config
 from prompt_library.system_prompt import PRODUCT_BOT_PROMPT
-
-# Global in-memory session storage
-chat_histories = {}
+from datetime import datetime
 
 
 class RetrieverServices:
     """
-    Chatbot Retriever Service for Ecommerce queries.
-
-    Responsibilities:
-    -----------------
-    - Load vector database (AstraDB) as retriever.
-    - Initialize Groq/OpenAI LLM for response generation.
-    - Build a LangChain pipeline with prompt templates.
-    - Maintain per-session chat history with RunnableWithMessageHistory.
-
-    Attributes:
-    -----------
-    llm : ChatGroq | ChatOpenAI
-        Large language model instance.
-    retriever : BaseRetriever
-        Vector store retriever for semantic search.
-    prompt : ChatPromptTemplate
-        Prompt template with system + human instructions.
-    chain_with_history : RunnableWithMessageHistory
-        Runnable chain supporting conversational memory.
+    Chatbot Retriever Service for Ecommerce queries with AstraDB chat history persistence.
     """
 
     def __init__(self, provider: str = "groq"):
-        """
-        Initialize the retriever service with an LLM provider.
-
-        Parameters
-        ----------
-        provider : str, optional
-            LLM provider name ("groq" or "openai"), default is "groq".
-
-        Raises
-        ------
-        ValueError
-            If the provider is not supported.
-        """
         llm_config = get_llm_config(provider)
 
         # Initialize LLM
@@ -72,75 +36,97 @@ class RetrieverServices:
         else:
             raise ValueError(f"Unsupported provider: {provider}")
 
-        # Vector retriever
+        # Vector retriever (for product data)
         vstore = DataIngestion().run()
-        self.retriever = vstore.as_retriever(
-            search_type="similarity",
-            search_kwargs={"k": 3}
-        )
+        self.retriever = vstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
-        # Prompt template
+        # Astra DB connection for chat history
+        self.db = DataIngestion().get_astra_db()
+
+        # Prompt template for conversation
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", PRODUCT_BOT_PROMPT),
             ("human", "{question}")
         ])
 
-        # Core chain:
-        # - Pass question directly to retriever as query
-        # - Collect context + question for LLM prompt
+        # Core chain logic
         base_chain = (
             {
-                "context": (lambda x: self.retriever.invoke(x["question"])),
-                "question": RunnablePassthrough()
+                "context": lambda x: self.retriever.invoke(x["question"]),
+                "question": RunnablePassthrough(),
             }
             | self.prompt
             | self.llm
             | StrOutputParser()
         )
 
-        # Wrap with chat history
+        # Wrap with message history
         self.chain_with_history = RunnableWithMessageHistory(
             base_chain,
             self._get_session_history,
             input_messages_key="question",
-            history_messages_key="history"
+            history_messages_key="history",
         )
 
-    def _get_session_history(self, session_id: str) -> InMemoryChatMessageHistory:
-        """
-        Retrieve or create chat history for a session.
+    # ========== CHAT MEMORY HANDLING ========== #
+    def _get_session_history(self, session_id: str):
+        """Retrieve chat history for a given session."""
+        messages = self._load_history_from_db(session_id)
+        memory = InMemoryChatMessageHistory()
 
-        Parameters
-        ----------
-        session_id : str
-            Unique identifier for the chat session.
+        for msg in messages:
+            # Flexible parsing — handles both formats
+            if "user" in msg and "bot" in msg:
+                memory.add_user_message(msg["user"])
+                memory.add_ai_message(msg["bot"])
+            elif "role" in msg and msg["role"] == "user":
+                memory.add_user_message(msg.get("text", ""))
+            elif "role" in msg and msg["role"] == "assistant":
+                memory.add_ai_message(msg.get("text", ""))
+            else:
+                print(f"⚠️ Skipping malformed message: {msg}")
 
-        Returns
-        -------
-        InMemoryChatMessageHistory
-            In-memory history object for the session.
-        """
-        if session_id not in chat_histories:
-            chat_histories[session_id] = InMemoryChatMessageHistory()
-        return chat_histories[session_id]
+        return memory
 
+    def _load_history_from_db(self, session_id: str):
+        """Fetch chat history from Astra DB for session_id."""
+        try:
+            collection = self.db.get_collection("chat_history")
+            docs = collection.find({"session_id": session_id})
+            return sorted(docs, key=lambda x: x.get("timestamp", ""))
+        except Exception as e:
+            print(f"[WARN] Could not load chat history: {e}")
+            return []
+
+    def _save_message_to_db(self, session_id: str, user_msg: str, bot_msg: str):
+        """Save chat messages to Astra DB."""
+        try:
+            collection = self.db.get_collection("chat_history")
+            doc = {
+                "session_id": session_id,
+                "user": user_msg,
+                "bot": bot_msg,
+                "timestamp": datetime.utcnow().isoformat(),
+            }
+            collection.insert_one(doc)
+            print(f"✅ Message inserted for session {session_id}")
+        except Exception as e:
+            print(f"[ERROR] Failed to save chat message: {e}")
+
+    # ========== MAIN CHAT FUNCTION ========== #
     def get_answer(self, query: str, session_id: str = "default") -> str:
-        """
-        Generate an AI-powered answer for a user query.
+        """Generate answer + persist conversation to Astra DB."""
+        try:
+            response = self.chain_with_history.invoke(
+                {"question": query},
+                config={"configurable": {"session_id": session_id}},
+            )
 
-        Parameters
-        ----------
-        query : str
-            Customer query or product-related question.
-        session_id : str, optional
-            Session identifier for maintaining chat history.
+            # Save user + AI message
+            self._save_message_to_db(session_id, query, response)
 
-        Returns
-        -------
-        str
-            Chatbot's generated response.
-        """
-        return self.chain_with_history.invoke(
-            {"question": query},
-            config={"configurable": {"session_id": session_id}}
-        )
+            return response
+
+        except Exception as e:
+            print(f"[ERROR] Unexpected error in get_answer: {e}")
+            return "⚠️ Sorry, something went wrong while processing your request."

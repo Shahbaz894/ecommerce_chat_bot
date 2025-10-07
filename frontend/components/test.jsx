@@ -11,9 +11,8 @@ export default function VoiceChat() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // ✅ Fix: crypto.randomUUID must be called
   const [sessionId] = useState(() =>
-    typeof crypto !== "undefined" && crypto.randomUUID
+    crypto.randomUUID
       ? crypto.randomUUID()
       : "session_" + Math.random().toString(36).substring(2, 9)
   );
@@ -22,7 +21,7 @@ export default function VoiceChat() {
   const audioChunksRef = useRef([]);
   const chatBoxRef = useRef(null);
 
-  // Auto scroll down on new messages
+  // --- Scroll to bottom when messages update ---
   useEffect(() => {
     if (chatBoxRef.current) {
       chatBoxRef.current.scrollTo({
@@ -32,44 +31,17 @@ export default function VoiceChat() {
     }
   }, [messages]);
 
-  // 🧠 Load chat history when component mounts
-  useEffect(() => {
-    const loadHistory = async () => {
-      try {
-        const res = await fetch(`${BACKEND_URL}/api/history/${sessionId}`);
-        if (!res.ok) throw new Error("Failed to load history");
-        const data = await res.json();
-        if (data.history) setMessages(data.history);
-      } catch (err) {
-        console.error("Failed to load history:", err);
-      }
-    };
-    loadHistory();
-  }, [sessionId]);
-
-  // ---------------------- Save message ----------------------
-  const saveToHistory = async (message) => {
-    try {
-      await fetch(`${BACKEND_URL}/api/history/${sessionId}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(message),
-      });
-    } catch (err) {
-      console.error("Failed to save history:", err);
-    }
-  };
-
-  // ---------------------- Helper: Parse image URLs ----------------------
+  // ---------------------- Helper: Detect image URLs or Markdown ----------------------
   const parseBotReply = (reply) => {
     if (!reply) return { contentType: "text", text: "No reply" };
 
+    // Check for Markdown link syntax [text](url)
     const markdownMatch = reply.match(/\[.*?\]\((https?:\/\/[^\s)]+)\)/);
     const markdownUrl = markdownMatch ? markdownMatch[1] : null;
 
+    // Check for plain URL
     const plainUrlMatch = reply.match(/https?:\/\/[^\s]+/);
     const url = markdownUrl || (plainUrlMatch ? plainUrlMatch[0] : null);
-
     const isImage = url && /\.(jpeg|jpg|gif|png|webp)$/i.test(url);
 
     if (isImage) {
@@ -89,41 +61,34 @@ export default function VoiceChat() {
     setLoading(true);
     setError(null);
 
-    const userMsg = {
-      id: Date.now() + "_u",
-      role: "user",
-      text: input,
-      timestamp: new Date().toLocaleTimeString(),
-    };
-
-    setMessages((prev) => [...prev, userMsg]);
-    saveToHistory(userMsg);
-
     try {
       const res = await fetch(
-        `${BACKEND_URL}/api/chat/ask_product?query=${encodeURIComponent(
+        `${BACKEND_URL}/api/ask_product?query=${encodeURIComponent(
           input
         )}&session_id=${sessionId}`
       );
-
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
 
-      // ✅ Fix: backend sends “response”, not “answer”
-      const parsed = parseBotReply(data.response || data.answer);
+      const parsed = parseBotReply(data.answer);
 
-      const aiMsg = {
-        id: Date.now() + "_a",
-        role: "ai",
-        ...parsed,
-        timestamp: new Date().toLocaleTimeString(),
-      };
-
-      setMessages((prev) => [...prev, aiMsg]);
-      saveToHistory(aiMsg);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now() + "_u",
+          role: "user",
+          text: input,
+          timestamp: new Date().toLocaleTimeString(),
+        },
+        {
+          id: Date.now() + "_a",
+          role: "ai",
+          ...parsed,
+          timestamp: new Date().toLocaleTimeString(),
+        },
+      ]);
       setInput("");
     } catch (err) {
-      console.error(err);
       setError(err.message);
     } finally {
       setLoading(false);
@@ -138,10 +103,12 @@ export default function VoiceChat() {
       const recorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
       mediaRecorderRef.current = recorder;
       audioChunksRef.current = [];
+
       recorder.ondataavailable = (e) => {
         if (e.data.size > 0) audioChunksRef.current.push(e.data);
       };
-      recorder.onstop = sendVoiceMessage;
+
+      recorder.onstop = () => sendVoiceMessage();
       recorder.start();
       setIsRecording(true);
     } catch (err) {
@@ -160,7 +127,6 @@ export default function VoiceChat() {
   const sendVoiceMessage = async () => {
     if (!audioChunksRef.current.length) return;
     setLoading(true);
-
     try {
       const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
       const formData = new FormData();
@@ -177,26 +143,22 @@ export default function VoiceChat() {
 
       const parsed = parseBotReply(data.ai_response);
 
-      const userMsg = {
-        id: Date.now() + "_u",
-        role: "user",
-        text: data.user_query || "🎤 (voice input)",
-        timestamp: new Date().toLocaleTimeString(),
-      };
-
-      const aiMsg = {
-        id: Date.now() + "_a",
-        role: "ai",
-        ...parsed,
-        timestamp: new Date().toLocaleTimeString(),
-        audioUrl: data.audio_path
-          ? `${BACKEND_URL}${data.audio_path}`
-          : undefined,
-      };
-
-      setMessages((prev) => [...prev, userMsg, aiMsg]);
-      saveToHistory(userMsg);
-      saveToHistory(aiMsg);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now() + "_u",
+          role: "user",
+          text: data.user_query || "🎤 (voice input)",
+          timestamp: new Date().toLocaleTimeString(),
+        },
+        {
+          id: Date.now() + "_a",
+          role: "ai",
+          ...parsed,
+          timestamp: new Date().toLocaleTimeString(),
+          audioUrl: `${BACKEND_URL}${data.audio_path}`,
+        },
+      ]);
     } catch (err) {
       setError(err.message || "Voice processing failed");
     } finally {
@@ -215,7 +177,7 @@ export default function VoiceChat() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-blue-300">
-          🤖 Smart AI ChatBot
+          🤖 Smart AI E-Commerce ChatBot
         </h2>
 
         {/* Chat Box */}
@@ -225,7 +187,7 @@ export default function VoiceChat() {
         >
           {messages.length === 0 && (
             <p className="text-sm text-gray-400 text-center mt-20">
-              No messages yet. Start chatting ✨
+              No messages yet. Type or record to start ✨
             </p>
           )}
 
@@ -241,6 +203,7 @@ export default function VoiceChat() {
                   : "bg-blue-900/40 border-blue-300/20 text-left mr-auto max-w-[80%]"
               }`}
             >
+              {/* Display text or image */}
               {msg.contentType === "image" && msg.imageUrl ? (
                 <>
                   {msg.text && (
@@ -271,28 +234,33 @@ export default function VoiceChat() {
           {error && (
             <p className="text-red-400 text-xs mt-2 text-center">⚠ {error}</p>
           )}
+          {loading && (
+            <p className="text-blue-300 text-xs mt-2 text-center">
+              ⏳ Processing...
+            </p>
+          )}
         </div>
 
-        {/* Input + Buttons */}
+        {/* Input Bar */}
         <div className="flex gap-2 mt-4">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="💬 Type here..."
-            className="flex-1 bg-[#0e1536] border border-blue-400/30 text-white px-3 py-2 rounded-2xl focus:ring-2 focus:ring-blue-400"
+            placeholder="💬 Ask about a product..."
+            className="flex-1 bg-[#0e1536] border border-blue-400/30 text-white px-3 py-2 rounded-2xl shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={sendTextMessage}
             disabled={loading}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-2xl shadow-md"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-2xl shadow-md transition-transform"
           >
-            {loading ? "..." : "Send 🚀"}
+            Send 🚀
           </motion.button>
         </div>
 
-        {/* Voice Controls */}
+        {/* Voice Buttons */}
         <div className="flex justify-center gap-3 mt-4 flex-wrap">
           {!isRecording ? (
             <motion.button
@@ -302,10 +270,11 @@ export default function VoiceChat() {
               disabled={loading}
               className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-2xl shadow-md"
             >
-              🎙 Start
+              🎙 Start Recording
             </motion.button>
           ) : (
             <motion.button
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
               onClick={stopRecording}
               className="bg-gray-700 hover:bg-gray-800 text-white px-5 py-2 rounded-2xl shadow-md"
@@ -316,7 +285,10 @@ export default function VoiceChat() {
 
           <motion.button
             whileTap={{ scale: 0.9 }}
-            onClick={() => setMessages([])}
+            onClick={() => {
+              setMessages([]);
+              setError(null);
+            }}
             className="bg-gray-300 hover:bg-gray-400 text-black px-5 py-2 rounded-2xl shadow-md"
           >
             Clear 🧹
