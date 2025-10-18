@@ -2,6 +2,8 @@
 
 An AI-powered chatbot for e-commerce product search and customer support.
 Built with FastAPI for backend, vanilla JS frontend (can be upgraded to React/Next.js), and supports deployment on AWS EC2.
+```markdown
+<details>
 ecommerce_chat_bot/
 │
 ├── backend/
@@ -80,6 +82,7 @@ ecommerce_chat_bot/
 ├── docker-compose.yml                   # Runs backend + frontend + AstraDB
 ├── setup.py                             # Installation entry for package
 └── README.md                            # Full project documentation
+</details> ```
 
 
 
